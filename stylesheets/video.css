@@ -1,0 +1,64 @@
+#video-info-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#video-title {
+  font-size: 2rem;
+  font-family: 'Oswald', sans-serif;
+  /* margin-top: 0.6vw; */
+  /* padding: 0.1vw; */
+  align-self: center;
+}
+
+#video-author {
+  font-size: 1rem;
+  font-family: 'Raleway', sans-serif;
+  /* margin-top: 0.6vw;
+    padding: 0.1vw; */
+  /* align-self: center; */
+}
+
+#video-author-container {
+  margin-top: 0.6vw;
+  padding: 0.1vw;
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#video-by {
+  padding-right: 0.5rem;
+}
+
+#video-description {
+  padding-left: 1vw;
+  align-self: center;
+}
+
+#video-tags-container {
+  padding: 1vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.tag {
+  padding: 1rem;
+}
+
+#main-player {
+  width: 64vw;
+  height: 36vw;
+  /* width: 66vw; */
+  /* width: 420px;
+    height: 300px; */
+  /* justify-self: stretch;
+    align-self: stretch; */
+}
+
+#test-upload:hover {
+  color: red;
+}

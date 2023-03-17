@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/index.css">
+    <link rel="stylesheet" href="/stylesheets/header.css">
+    <link rel="stylesheet" href="/stylesheets/video.css">
+</head>
+<body>
+    <script type="module" src="./index.js" \></script>
+    <header>
+        <div class="navbar-container">
+          <nav>
+            <div id="navbar-title">Ucudo</div>
+          </nav>
+          <div class="login-register">
+            <a href="#" class="btn login">Login</a>
+            <a href="#" class="btn register">Register</a>
+          </div>
+        </div>
+      </header>
+
+      <content>
+        <video id="main-player" controls>
+          <source src="test-vid.MP4" type="video/mp4">
+        </video>
+        <div id="video-info-container">
+          <div id="video-title">Title</div>
+          <div id="video-author-container">
+            <div id="video-by">By</div>
+            <div id="video-author">Author</div>
+          </div>
+          <div id="video-description">Description</div>
+          <div id="video-description-container">
+            <div id="video-description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam consectetur leo maximus purus porttitor, ac fringilla nulla dignissim. Sed at ex sed neque 
+              consequat blandit maximus id mauris. Sed elementum diam et arcu maximus tristique.
+            </div>
+            <div id="video-tags-container">
+              <div class="tag">Tag 1</div>
+              <div class="tag">Tag 2</div>
+            </div>
+          </div>
+        </div>
+        <div> comments </div>
+        <input type="file"
+       id="video-submit" name="video-submit"
+       accept="video/mp4"></input>
+        <!-- <div id="play-button">play/pause</div> -->
+      </content>
+      <button id="test-upload">Test Upload</button>
+
+
+</body>
+</html>

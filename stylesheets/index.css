@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Oswald&family=Raleway:ital,wght@1,600&display=swap');
+  /* #play-button{
+    color: red;
+    width: 20rem;
+    border: solid 1px black;
+  } */
+
+
+  content{
+    padding: 1vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-bottom: 1vw;
+    margin-left: 4vw;
+    display: grid;
+    grid-template-columns: 64vw 30vw;
+    grid-template-rows: 36vw;
+  }
+
+  *{
+    /* outline: solid 1px red; */
+    background-color: rgb(28, 28, 28);
+    color: rgb(240, 240, 240);
+  }
