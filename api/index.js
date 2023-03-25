@@ -1,51 +1,22 @@
-// import { loToHi, defaultSort } from '../components/sort';
-
-// export const BASE_URL = 'postgres://localhost:5432/ucudo';
-export const BASE_URL = 'http://localhost:3000';
-
-export const uploadVideoToDb = async ({title, author, description, encodedBinaryString, timestamp, size}) => {
+export const BASE_URL        = 'http://localhost:3000';
+export const uploadVideoToDb = async (formData) => {
     
-    const formData = new FormData();
-    formData.append('title', title);
-    formData.append('author', author);
-    formData.append('description', description);
-    formData.append('encodedBinaryString', encodedBinaryString);
-    formData.append('timestamp', timestamp);
-    formData.append('size', size);
+    // function iterateFormData(formData) {
+    //     for (const [key, value] of formData.entries()) {
+    //       console.log(key, value);
+    //     }
+    //   }
 
-    const searchParams = new URLSearchParams();
+    //   iterateFormData(formData)
 
-    for (const pair of formData.entries()) {
-        searchParams.append(pair[0], pair[1]);
-      }
-    // const details = {
-    //     'title': title,
-    //     'author': author,
-    //     'description': description,
-    //     'encodedBinaryString': encodedBinaryString,
-    //     'timeStamp': timestamp,
-    //     'size': size
-    // }
-    // const formBody = Object.keys(details).map(key => encodeURIComponent(key) + '=' + encodeURIComponent(details[key])).join('&');
 
     try{
-        const boundary = '----WebKitFormBoundaryoah42hxjcDCXmfO6';
-        const response = await fetch(`${BASE_URL}/api/v1/videos`, {
+        const response = await fetch(`${BASE_URL}/api/v1/videos/upload`, {
             method: "POST",
-            timeout: 10000,
-            headers: {
-                // 'Content-Type': `multipart/form-data; boundary=${boundary}`
-              "Content-Type": `application/x-www-form-urlencoded; boundary=${boundary}`
-              
-            },
-            transformRequest: function(obj) {
-                var str = [];
-                for(var p in obj)
-                str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
-                return str.join("&");
-            },
-            body: searchParams
+            body: formData
         });
+        const data = await response.json();
+        console.log('Upload successful:', data);
     } catch(err) {
         console.error(err);
     }

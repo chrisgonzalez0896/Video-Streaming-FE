@@ -45,10 +45,21 @@
           </div>
         </div>
         <div> comments </div>
-        <input type="file"
-       id="video-submit" name="video-submit"
-       accept="video/mp4"></input>
-        <!-- <div id="play-button">play/pause</div> -->
+        <form id="uploadVideo" enctype="multipart/form-data">
+          <label for="videoFile">Select video to upload:</label>
+          <input type="file" id="videoFile" name="videoFile" accept="video/*" required><br><br>
+  
+          <label for="title">Title:</label>
+          <input type="text" id="title" name="title" required><br><br>
+  
+          <label for="author">Author:</label>
+          <input type="text" id="author" name="author" required><br><br>
+
+          <label for="description">Description:</label>
+          <input type="text" id="description" name="description" required><br><br>
+  
+          <button type="submit">Upload</button>
+      </form>
       </content>
       <button id="test-upload">Test Upload</button>
 
