@@ -9,6 +9,7 @@
   "author": "Chris Gonzalez",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^5.2.3"
+    "bootstrap": "^5.2.3",
+    "socket.io": "^4.6.1"
   }
 }
